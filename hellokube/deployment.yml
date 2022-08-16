@@ -4,6 +4,7 @@ metadata:
   name: hellokube-deployment
   labels:
     app: hellokube
+    app2: helloworld
 spec:
   replicas: 1
   selector:
