@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellokube-deployment
+  labels:
+    app: hellokube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hellokube
+  template:
+    metadata:
+      labels:
+        app: hellokube
+    spec:
+      containers:
+        - name: hellokube-container02
+          image: azzahamdy/hellokube:v1
+          ports:
+            - containerPort: 90
+          envFrom:
+            - configMapRef:
+                name: hellokube-configmap

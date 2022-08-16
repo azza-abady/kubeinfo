@@ -1,0 +1,4 @@
+server:
+  port : 7070
+endpoint:
+  url : http://hellokubeapp:8080/username

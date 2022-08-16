@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hellokube-pod
+spec:
+  containers:
+    - name: hellokube-container01
+      image: azzahamdy/hellokube:latest
+      ports:
+        - containerPort: 8080
